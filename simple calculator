@@ -1,0 +1,39 @@
+def calculator():
+    print(" it is simple calculator ")
+    print("choose any operation:")
+    print("1.  Addition (+)")
+    print("2.  Subtraction (-)")
+    print("3.   Multiplication (*)")
+    print("4.   Division (/)")
+
+    try: 
+        number1 = int(input("Enter first number:"))
+        number2 = int(input("Enter second number:"))
+
+    except ValueError:
+        print("Invalid input. please enter the valid number")
+        return
+    
+    operation = input("Enter the operation (+, -, *, /) ")
+
+    if operation == '+':
+        result = number1 + number2
+        print(f"The result of {number1} + {number2} is {result} ")
+    
+    elif operation == '-':
+        result = number1 - number2
+        print(f"The result of {number1} - {number2} is {result}")
+
+    elif operation =='*':
+        result = number1 * number2
+        print(f"The result of {number1} * {number2} is {result}")
+    elif operation =='/':
+        if number2 ==0:
+            print(" Error: Division by zero is not allowed")
+        else:
+            result = number1 / number2
+            print(f"The result of {number1} / {number2} is {result}")
+    else:
+        print("please choose valid operation.")
+
+calculator()
